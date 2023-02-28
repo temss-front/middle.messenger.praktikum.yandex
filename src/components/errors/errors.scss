@@ -1,0 +1,37 @@
+@import "src/styles/variables";
+@mixin fonts($size) {
+  font-family: "Inter", sans-serif;
+  font-size: ($size);
+}
+
+.error-container {
+  position: relative;
+  width: 28rem;
+  margin: 20vh auto;
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid #999;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  .error-code {
+    margin: 20px auto;
+    @include fonts(28px);
+  }
+
+  .error-description {
+    margin: 10px auto 30px auto;
+    @include fonts(20px);
+  }
+
+  .button-return {
+    margin: 10px auto 30px auto;
+    text-decoration: none;
+    color: $base-color;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 13px;
+  }
+}
