@@ -1,6 +1,7 @@
 @import "src/styles/variables";
+
 @mixin fonts($size) {
-  font-family: "Inter", sans-serif;
+  font-family: Inter, sans-serif;
   font-size: ($size);
 }
 
@@ -18,16 +19,18 @@
 
   .error-code {
     margin: 20px auto;
+
     @include fonts(28px);
   }
 
   .error-description {
-    margin: 10px auto 30px auto;
+    margin: 10px auto 30px;
+
     @include fonts(20px);
   }
 
   .button-return {
-    margin: 10px auto 30px auto;
+    margin: 10px auto 30px;
     text-decoration: none;
     color: $base-color;
     font-weight: 500;
