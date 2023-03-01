@@ -14,12 +14,6 @@ export default class Button extends Block<ButtonProps> {
     super(tagName, props);
   }
 
-  addEvents() {
-    this.element.querySelectorAll("button").forEach((btn) => {
-      btn.addEventListener("click", this.props.events.click);
-    });
-  }
-
   render() {
     return this.compile(button, this.props);
   }

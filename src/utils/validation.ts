@@ -4,6 +4,7 @@ const validation: (
   field: HTMLInputElement,
   props: Props
 ) => boolean | undefined = (field: HTMLInputElement, props: Props) => {
+  console.log(props);
   const { name, value, classList } = field;
   if (!name || undefined) return;
   const re = /^\s*$/;
@@ -11,11 +12,11 @@ const validation: (
     props[name].setProps({
       inputClass: classList + " error",
       inputValue: value,
-      inputInvalid: "it can't be empty",
+      inputInvalid: "Не может быть пустым",
     });
     return false;
   }
-  if (name === "inputName" || name === "inputScdName") {
+  if (name === "first_name" || name === "second_name") {
     if (!nameValidation(value)) {
       props[name].setProps({
         inputClass: "error",
@@ -25,7 +26,7 @@ const validation: (
       return false;
     }
   }
-  if (name === "inputLogin") {
+  if (name === "login") {
     if (!nameValidation(value, 6, 20)) {
       props[name].setProps({
         inputClass: "error",
@@ -36,7 +37,7 @@ const validation: (
     }
   }
 
-  if (name === "inputPassword" || name === "inputPasswordScd") {
+  if (name === "password" || name === "second_password") {
     if (!passValidation(value, 8, 40)) {
       props[name].setProps({
         inputClass: "error",
@@ -47,7 +48,7 @@ const validation: (
     }
   }
 
-  if (name === "inputMail") {
+  if (name === "email") {
     if (!mailValidation(value)) {
       props[name].setProps({
         inputClass: "error",
@@ -58,7 +59,7 @@ const validation: (
     }
   }
 
-  if (name === "inputPhone") {
+  if (name === "phone") {
     if (!phoneValidation(value)) {
       props[name].setProps({
         inputClass: "error",
@@ -70,7 +71,7 @@ const validation: (
   }
   const passwords = Array.from(
     document.querySelectorAll(
-      "input[name=inputPassword], input[name=inputPasswordScd]"
+      "input[name=password], input[name=second_password], input[name=newPassword], input[name=newPassword_second]"
     )
   );
   if (passwords.length > 1 && field === passwords[passwords.length - 1]) {

@@ -18,10 +18,6 @@ export default class ChatRoomItem extends Block<ChatRoomItemProps> {
     super(tagName, props);
   }
 
-  addEvents() {
-    this.element?.addEventListener("click", this.props.events.click);
-  }
-
   addAttribute() {
     const {
       attr = {

@@ -13,12 +13,6 @@ export default class Errors extends Block<ErrorProps> {
     super(tagName, props);
   }
 
-  addEvents() {
-    this.element
-      .querySelector(".button-return")
-      ?.addEventListener("click", this.props.events.click);
-  }
-
   render() {
     return this.compile(error, this.props);
   }

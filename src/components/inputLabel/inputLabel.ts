@@ -13,13 +13,6 @@ type InputLabelProps = {
   attr?: Record<string, string>;
 };
 export default class InputLabel extends Block<InputLabelProps> {
-  addEvents() {
-    this.element.querySelectorAll("input").forEach((inp) => {
-      inp.addEventListener("blur", this.props.events.blur);
-      inp.addEventListener("focus", this.props.events.focus);
-    });
-  }
-
   addAttribute() {
     const {
       attr = {

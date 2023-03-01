@@ -22,10 +22,10 @@ const altBtn = new Button("div", {
   },
 });
 
-const inputMail = new Input("li", {
+const email = new Input("li", {
   inputType: "text",
   inputPlaceholder: "Почта",
-  inputName: "inputMail",
+  inputName: "email",
   events: {
     focus: inputFocus,
     blur: (e: Event) => {
@@ -34,10 +34,10 @@ const inputMail = new Input("li", {
   },
 });
 
-const inputLogin = new Input("li", {
+const login = new Input("li", {
   inputType: "text",
   inputPlaceholder: "Логин",
-  inputName: "inputLogin",
+  inputName: "login",
   events: {
     focus: inputFocus,
     blur: (e: Event) => {
@@ -46,10 +46,10 @@ const inputLogin = new Input("li", {
   },
 });
 
-const inputName = new Input("li", {
+const first_name = new Input("li", {
   inputType: "text",
   inputPlaceholder: "Имя",
-  inputName: "inputName",
+  inputName: "first_name",
   events: {
     focus: inputFocus,
     blur: (e: Event) => {
@@ -58,10 +58,10 @@ const inputName = new Input("li", {
   },
 });
 
-const inputScdName = new Input("li", {
+const second_name = new Input("li", {
   inputType: "text",
   inputPlaceholder: "Фамилия",
-  inputName: "inputScdName",
+  inputName: "second_name",
   events: {
     focus: inputFocus,
     blur: (e: Event) => {
@@ -70,10 +70,10 @@ const inputScdName = new Input("li", {
   },
 });
 
-const inputPhone = new Input("li", {
+const phone = new Input("li", {
   inputType: "tel",
   inputPlaceholder: "Телефон",
-  inputName: "inputPhone",
+  inputName: "phone",
   events: {
     focus: inputFocus,
     blur: (e: Event) => {
@@ -82,10 +82,10 @@ const inputPhone = new Input("li", {
   },
 });
 
-const inputPassword = new Input("li", {
+const password = new Input("li", {
   inputType: "password",
   inputPlaceholder: "Пароль",
-  inputName: "inputPassword",
+  inputName: "password",
   events: {
     focus: inputFocus,
     blur: (e: Event) => {
@@ -94,10 +94,10 @@ const inputPassword = new Input("li", {
   },
 });
 
-const inputPasswordScd = new Input("li", {
+const second_password = new Input("li", {
   inputType: "password",
   inputPlaceholder: "Повторите пароль",
-  inputName: "inputPasswordScd",
+  inputName: "second_password",
   events: {
     focus: inputFocus,
     blur: (e: Event) => {
@@ -111,13 +111,13 @@ const data = {
   footerTitle: "Регистрация",
   goButton,
   altBtn,
-  inputMail,
-  inputLogin,
-  inputName,
-  inputScdName,
-  inputPhone,
-  inputPassword,
-  inputPasswordScd,
+  email,
+  login,
+  first_name,
+  second_name,
+  phone,
+  password,
+  second_password,
   events: {
     submit: (e: Event) => {
       formSubmitEvent(e, data);

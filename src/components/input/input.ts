@@ -18,14 +18,6 @@ export default class Input extends Block<InputProps> {
   constructor(tagName: string, props: InputProps) {
     super(tagName, props);
   }
-
-  addEvents() {
-    this.element.querySelectorAll("input").forEach((inp) => {
-      inp.addEventListener("blur", this.props.events.blur);
-      inp.addEventListener("focus", this.props.events.focus);
-    });
-  }
-
   addAttribute() {
     const {
       attr = {

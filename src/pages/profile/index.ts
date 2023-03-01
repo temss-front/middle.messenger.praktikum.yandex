@@ -51,6 +51,7 @@ const inputMail = new InputLabel("li", {
   inputType: "text",
   inputId: "van@mail.ru",
   disabled: "disabled",
+  inputName: "email",
   events: {},
 });
 
@@ -59,6 +60,7 @@ const inputLogin = new InputLabel("li", {
   inputType: "text",
   inputId: "an",
   disabled: "disabled",
+  inputName: "login",
   events: {},
 });
 
@@ -67,6 +69,7 @@ const inputName = new InputLabel("li", {
   inputType: "text",
   inputId: "Иван",
   disabled: "disabled",
+  inputName: "first_name",
   events: {},
 });
 
@@ -75,6 +78,7 @@ const inputScdName = new InputLabel("li", {
   inputType: "text",
   inputId: "Иванов",
   disabled: "disabled",
+  inputName: "second_name",
   events: {},
 });
 
@@ -83,6 +87,7 @@ const inputNick = new InputLabel("li", {
   inputType: "text",
   inputId: "vanvan",
   disabled: "disabled",
+  inputName: "display_name",
   events: {},
 });
 
@@ -91,6 +96,7 @@ const inputPhone = new InputLabel("li", {
   inputType: "text",
   inputId: "+7-909-09-09-090",
   disabled: "disabled",
+  inputName: "phone",
   events: {},
 });
 

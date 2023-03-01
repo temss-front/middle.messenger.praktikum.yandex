@@ -121,7 +121,7 @@ const recMess2 = new Message("div", {
 const messageArea = new Input("div", {
   inputType: "text",
   inputClass: "message chat-input__msg",
-  inputName: "messageArea",
+  inputName: "message",
   inputPlaceholder: "Введите ваше сообщение...",
   inputAutocomplete: "off",
   events: {},

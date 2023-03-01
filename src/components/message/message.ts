@@ -16,12 +16,6 @@ export default class Message extends Block<MessageProps> {
     super(tagName, props);
   }
 
-  addEvents() {
-    this.element
-      .querySelector("span")
-      ?.addEventListener("click", this.props.events.click);
-  }
-
   addAttribute() {
     const { attr = { class: "message-item" } } = this.props;
     const _attr = attr as Record<string, any>;
