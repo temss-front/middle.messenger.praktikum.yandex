@@ -1,0 +1,32 @@
+@import "../../styles/variables";
+
+.input-wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+
+  input {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 13px;
+    color: #1e1e1e;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    display: block;
+    border-bottom: 1px solid $base-color;
+    outline: none;
+    margin-top: 8px;
+  }
+
+  span {
+    height: 10px;
+    color: $danger;
+    background: transparent;
+  }
+}

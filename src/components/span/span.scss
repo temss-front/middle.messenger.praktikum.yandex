@@ -1,0 +1,31 @@
+@import "src/styles/variables";
+
+.span-wrapper {
+  box-sizing: border-box;
+  margin: 6px 0;
+  font-family: Inter, sans-serif;
+  font-size: 15px;
+  width: 12rem;
+  height: 1.3rem;
+  align-items: end;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  border: 2px solid #fff;
+
+  &:hover {
+    border: 2px solid $base-color;
+  }
+
+  span {
+    cursor: pointer;
+  }
+}
+
+.spanBlue {
+  color: $base-color;
+}
+
+.spanRed {
+  color: $danger;
+}

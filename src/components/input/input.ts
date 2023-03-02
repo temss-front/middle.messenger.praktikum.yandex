@@ -1,0 +1,39 @@
+import input from "./input.hbs";
+import "./input.scss";
+import { IEvents } from "../../types/events.interface";
+import Block from "../../core/Block";
+
+type InputProps = {
+  inputType: string;
+  inputPlaceholder?: string;
+  inputName?: string;
+  inputAutocomplete?: string;
+  inputClass?: string;
+  inputValue?: string;
+  inputInvalid?: string;
+  events: IEvents;
+  attr?: Record<string, string>;
+};
+export default class Input extends Block<InputProps> {
+  constructor(tagName: string, props: InputProps) {
+    super(tagName, props);
+  }
+  addAttribute() {
+    const {
+      attr = {
+        class: "input-wrapper",
+      },
+    } = this.props;
+    const _attr = attr as Record<string, any>;
+
+    if (attr) {
+      Object.entries(_attr).forEach(([key, value]) => {
+        this.element.setAttribute(key, value);
+      });
+    }
+  }
+
+  render() {
+    return this.compile(input, this.props);
+  }
+}
