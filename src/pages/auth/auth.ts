@@ -9,12 +9,6 @@ export default class AuthPage extends Block<AuthPageProps> {
     super("div", props);
   }
 
-  addEvents() {
-    this.element.querySelectorAll("form").forEach((form) => {
-      form.addEventListener("submit", this.props.events.submit);
-    });
-  }
-
   render() {
     return this.compile(auth, this.props);
   }
