@@ -1,6 +1,6 @@
 html {
   line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  text-size-adjust: 100%; /* 2 */
 }
 
 /* Sections
@@ -11,7 +11,7 @@ html {
  */
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: Inter, sans-serif;
   margin: 0;
 }
 
@@ -76,6 +76,7 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
+
   /* 2 */
 }
 
@@ -189,7 +190,7 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button;
+  appearance: button;
 }
 
 /**
@@ -290,7 +291,7 @@ button {
  */
 
 [type="search"] {
-  -webkit-appearance: textfield; /* 1 */
+  appearance: textfield; /* 1 */
   outline-offset: -2px; /* 2 */
 }
 
@@ -299,7 +300,7 @@ button {
  */
 
 [type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
+  appearance: none;
 }
 
 /**
@@ -308,7 +309,7 @@ button {
  */
 
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
+  appearance: button; /* 1 */
   font: inherit; /* 2 */
 }
 
